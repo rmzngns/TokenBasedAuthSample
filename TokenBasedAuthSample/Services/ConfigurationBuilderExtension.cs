@@ -72,7 +72,6 @@ namespace TokenBasedAuthSample
 
                     if (!audienceText.StartsWith(cipherPrefix))
                     {
-                        
                         var encryptedAudience = EncryptProvider.AESEncrypt(audienceText, secretKey, vectorKey); // value şifrele
                         config.JWT.audience = $"{cipherPrefix}:{encryptedAudience}"; // json dosya yolundaki dizine şifrelenmiş olan değeri set et
                     }
